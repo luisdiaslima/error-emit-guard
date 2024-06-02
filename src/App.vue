@@ -48,7 +48,7 @@ const password = ref('');
 const auth = useAuth();
 
 const login = () => {
-  auth.login(email.value, password.value);
+  // auth.login(email.value, password.value);
   Sentry.captureMessage(`Something went wrong with user ${email.value}`);
 }
 </script>
