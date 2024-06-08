@@ -38,14 +38,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuth } from '../composables/auth';
 
 const router = useRouter();
-
-
 const email = ref('');
 const password = ref('');
 const auth = useAuth();

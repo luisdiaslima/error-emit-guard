@@ -19,7 +19,6 @@ import router from "../router";
   const logout = () => {
     user.email = '';
     user.password = '';
-
     Sentry.setUser(null)
     localStorage.removeItem('user')
     router.push('/')
