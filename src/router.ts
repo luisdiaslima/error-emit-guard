@@ -1,14 +1,14 @@
-import { createMemoryHistory, createRouter } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 const Home = () => import('../src/pages/Home.vue')
 const Profile = () => import('../src/pages/Profile.vue')
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/profile', name: 'Profile', component: Profile }
+  { path: '/', name: 'Home',  component: Home, alias: '/'},
+  { path: '/profile', name: 'Profile', component: Profile, alias: '/' },
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
 
