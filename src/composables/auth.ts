@@ -12,15 +12,14 @@ import router from "../router";
     user.email = email
     user.password = password
 
-    localStorage.setItem('user', user.email)
     Sentry.setUser({ email: user.email })
   }
 
   const logout = () => {
     user.email = '';
     user.password = '';
+    
     Sentry.setUser(null)
-    localStorage.removeItem('user')
     router.push('/')
   }
 
